@@ -1,0 +1,10 @@
+D:\Programming\C++\Captcha\Captcha\bin\Debug\Captcha.exe.config
+D:\Programming\C++\Captcha\Captcha\bin\Debug\Captcha.exe
+D:\Programming\C++\Captcha\Captcha\bin\Debug\Captcha.pdb
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.csprojAssemblyReference.cache
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.Properties.Resources.resources
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.csproj.GenerateResource.cache
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.csproj.CoreCompileInputs.cache
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.exe
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.pdb
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.Form1.resources

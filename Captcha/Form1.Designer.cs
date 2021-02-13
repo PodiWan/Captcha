@@ -30,20 +30,22 @@
         {
             this.flowPanelBottom = new System.Windows.Forms.FlowLayoutPanel();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.labelSelection = new System.Windows.Forms.Label();
             this.mainTable = new System.Windows.Forms.TableLayoutPanel();
             this.headerPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClose = new System.Windows.Forms.Button();
             this.formTable = new System.Windows.Forms.TableLayoutPanel();
-            this.labelSelection = new System.Windows.Forms.Label();
+            this.panelKeywordDisplay = new System.Windows.Forms.Panel();
             this.flowPanelBottom.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.formTable.SuspendLayout();
+            this.panelKeywordDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowPanelBottom
             // 
             this.flowPanelBottom.Controls.Add(this.btnConfirm);
-            this.flowPanelBottom.Controls.Add(this.labelSelection);
+            this.flowPanelBottom.Controls.Add(this.panelKeywordDisplay);
             this.flowPanelBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanelBottom.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowPanelBottom.Location = new System.Drawing.Point(3, 631);
@@ -55,15 +57,25 @@
             // 
             this.btnConfirm.FlatAppearance.BorderSize = 0;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnConfirm.Location = new System.Drawing.Point(1241, 0);
+            this.btnConfirm.Font = new System.Drawing.Font("Arial", 15F);
+            this.btnConfirm.Location = new System.Drawing.Point(1174, 0);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(75, 65);
+            this.btnConfirm.Size = new System.Drawing.Size(142, 65);
             this.btnConfirm.TabIndex = 0;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // labelSelection
+            // 
+            this.labelSelection.AutoSize = true;
+            this.labelSelection.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelection.Location = new System.Drawing.Point(3, 16);
+            this.labelSelection.Name = "labelSelection";
+            this.labelSelection.Size = new System.Drawing.Size(62, 23);
+            this.labelSelection.TabIndex = 2;
+            this.labelSelection.Text = "label1";
             // 
             // mainTable
             // 
@@ -122,15 +134,14 @@
             this.formTable.Size = new System.Drawing.Size(1322, 699);
             this.formTable.TabIndex = 6;
             // 
-            // labelSelection
+            // panelKeywordDisplay
             // 
-            this.labelSelection.AutoSize = true;
-            this.labelSelection.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSelection.Location = new System.Drawing.Point(1176, 0);
-            this.labelSelection.Name = "labelSelection";
-            this.labelSelection.Size = new System.Drawing.Size(62, 23);
-            this.labelSelection.TabIndex = 2;
-            this.labelSelection.Text = "label1";
+            this.panelKeywordDisplay.BackColor = System.Drawing.Color.Red;
+            this.panelKeywordDisplay.Controls.Add(this.labelSelection);
+            this.panelKeywordDisplay.Location = new System.Drawing.Point(563, 3);
+            this.panelKeywordDisplay.Name = "panelKeywordDisplay";
+            this.panelKeywordDisplay.Size = new System.Drawing.Size(608, 62);
+            this.panelKeywordDisplay.TabIndex = 3;
             // 
             // Form1
             // 
@@ -143,9 +154,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.flowPanelBottom.ResumeLayout(false);
-            this.flowPanelBottom.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.formTable.ResumeLayout(false);
+            this.panelKeywordDisplay.ResumeLayout(false);
+            this.panelKeywordDisplay.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -159,6 +171,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TableLayoutPanel formTable;
         private System.Windows.Forms.Label labelSelection;
+        private System.Windows.Forms.Panel panelKeywordDisplay;
     }
 }
 

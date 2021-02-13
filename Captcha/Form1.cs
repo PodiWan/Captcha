@@ -69,6 +69,9 @@ namespace Captcha
             //display the key
             labelSelection.Text = String.Concat("Select all the images containing: ", this.CaptchaKey);
             labelSelection.ForeColor = ColorTranslator.FromHtml("#fafafa");
+
+            //key display is in a panel, it is styled here
+            this.panelKeywordDisplay.BackColor = ColorTranslator.FromHtml("#222831");
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -87,16 +90,9 @@ namespace Captcha
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //create an empty string to display, after we assign a message
-            string outputString = "";
-            //assign the text according to the state of the captcha
-            if (checkCaptcha())
-                outputString = "All images are correct!";
-            else
-                outputString = "Some images do not match. Please try again.";
-
             //show the corresponding message
-            MessageBox.Show(outputString);
+            EndForm endForm = new EndForm(checkCaptcha());
+            endForm.ShowDialog();
         }
     }
 }

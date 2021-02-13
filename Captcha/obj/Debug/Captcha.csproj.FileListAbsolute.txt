@@ -8,3 +8,4 @@ D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.csproj.CoreCompileInputs.ca
 D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.exe
 D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.pdb
 D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.Form1.resources
+D:\Programming\C++\Captcha\Captcha\obj\Debug\Captcha.EndForm.resources

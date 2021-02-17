@@ -41,7 +41,7 @@ namespace Captcha
             this.wasSelected = !this.wasSelected;
             if (this.wasSelected)
             {
-                this.Tag = ColorTranslator.FromHtml("#ffd369");
+                this.Tag = ColorTranslator.FromHtml("#FF0054");
             }
             else
                 this.Tag = ColorTranslator.FromHtml("#393e46");

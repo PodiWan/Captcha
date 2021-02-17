@@ -5,7 +5,7 @@ namespace Captcha
 {
     public partial class EndForm : Form
     {
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel mainTable;
         private Panel panelColor;
         private Panel panelInfo;
         private Button btnExit;
@@ -44,31 +44,31 @@ namespace Captcha
 
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.mainTable = new System.Windows.Forms.TableLayoutPanel();
             this.panelColor = new System.Windows.Forms.Panel();
             this.labelIcon = new System.Windows.Forms.Label();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.mainTable.SuspendLayout();
             this.panelColor.SuspendLayout();
             this.panelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // mainTable
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.panelColor, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelInfo, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(579, 275);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.mainTable.ColumnCount = 2;
+            this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.mainTable.Controls.Add(this.panelColor, 0, 0);
+            this.mainTable.Controls.Add(this.panelInfo, 1, 0);
+            this.mainTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTable.Location = new System.Drawing.Point(0, 0);
+            this.mainTable.Name = "mainTable";
+            this.mainTable.RowCount = 1;
+            this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainTable.Size = new System.Drawing.Size(579, 275);
+            this.mainTable.TabIndex = 0;
             // 
             // panelColor
             // 
@@ -113,7 +113,7 @@ namespace Captcha
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.btnExit.Location = new System.Drawing.Point(312, 239);
+            this.btnExit.Location = new System.Drawing.Point(281, 217);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(91, 33);
             this.btnExit.TabIndex = 1;
@@ -135,11 +135,11 @@ namespace Captcha
             // EndForm
             // 
             this.ClientSize = new System.Drawing.Size(579, 275);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.mainTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EndForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.mainTable.ResumeLayout(false);
             this.panelColor.ResumeLayout(false);
             this.panelColor.PerformLayout();
             this.panelInfo.ResumeLayout(false);

@@ -22,17 +22,31 @@ namespace Captcha
         public string CaptchaKey { get; }
 
         //generate a CaptchaKey based on the available keys in the list of images
-        private string getRandomKey()
+        private string GetRandomKey()
         {
             Random rand = new Random();
             return this.images[rand.Next(this.images.Count - 1)].AttachedString;
+        }
+
+        public void ShuffleList()
+        {
+            Random rand = new Random();
+            int nrOfShuffles = rand.Next(this.images.Count / 2, 2 * this.images.Count);
+            for (int i = 0; i < nrOfShuffles; ++i)
+            {
+                int randomPosition1 = rand.Next(0, this.images.Count - 1);
+                int randomPosition2 = rand.Next(0, this.images.Count - 1);
+                CaptchaImage t = this.images[randomPosition1];
+                this.images[randomPosition1] = this.images[randomPosition2];
+                this.images[randomPosition2] = t;
+            }
         }
 
         public Form1()
         {
             InitializeComponent();
 
-            //add images in the list
+            //add images in the list - can be automated
             this.images.Add(new CaptchaImage("Guitar", Properties.Resources._12_accords_debutants_01));
             this.images.Add(new CaptchaImage("BCD logo", Properties.Resources.bcd_icon));
             this.images.Add(new CaptchaImage("Asus", Properties.Resources.desktop));
@@ -44,7 +58,7 @@ namespace Captcha
             this.images.Add(new CaptchaImage("University", Properties.Resources.Untitled));
 
             //generate the key
-            this.CaptchaKey = getRandomKey();
+            this.CaptchaKey = GetRandomKey();
 
             //set form properties
             this.Width = 1000;
@@ -57,6 +71,8 @@ namespace Captcha
             this.btnClose.BackColor = Color.Red;
             this.btnClose.Font = new Font("Segoe MDL2 Assets", 10);
             this.btnClose.Text = "\uE8BB";
+
+            ShuffleList();
 
             //add the images to the form
             foreach (CaptchaImage captchaImage in this.images)
@@ -79,7 +95,7 @@ namespace Captcha
             this.Close();
         }
 
-        private bool checkCaptcha()
+        private bool CheckCaptcha()
         {
             //homework: figure out what my genius came up with
             foreach (CaptchaImage ci in this.images)
@@ -91,7 +107,7 @@ namespace Captcha
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             //show the corresponding message
-            EndForm endForm = new EndForm(checkCaptcha());
+            EndForm endForm = new EndForm(CheckCaptcha());
             endForm.ShowDialog();
         }
     }
